@@ -1,4 +1,17 @@
 <!DOCTYPE html>
 <html>
 <title>Dank Tank LMP Uptime</title>
-<img src="https://img.shields.io/uptimerobot/status/m781502153-1e748e309db2c06d556f1959.svg" alt="If this shit doesn't load yer fucken hopeless mate" width=100% height=100%>
+<img src="https://img.shields.io/uptimerobot/status/m781502153-1e748e309db2c06d556f1959.svg" alt="If this shit doesn't load yer fucken hopeless mate" width=33% height=33%>
+<script>
+
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+        document.getElementById("CurrentState").innerHTML = myObj.CurrentPlayers;
+    }
+};
+xmlhttp.open("GET", "http://96.38.157.34:8900/", true);
+xmlhttp.send();
+
+</script>  
